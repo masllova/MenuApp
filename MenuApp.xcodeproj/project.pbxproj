@@ -14,6 +14,12 @@
 		336902402A50AB79001F3113 /* MenuAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369023F2A50AB79001F3113 /* MenuAppTests.swift */; };
 		3369024A2A50AB79001F3113 /* MenuAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902492A50AB79001F3113 /* MenuAppUITests.swift */; };
 		3369024C2A50AB79001F3113 /* MenuAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369024B2A50AB79001F3113 /* MenuAppUITestsLaunchTests.swift */; };
+		336902592A50AB98001F3113 /* DishesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902582A50AB98001F3113 /* DishesManager.swift */; };
+		3369025B2A519F05001F3113 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369025A2A519F05001F3113 /* Constants.swift */; };
+		3369025D2A519F40001F3113 /* DishesObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369025C2A519F40001F3113 /* DishesObjects.swift */; };
+		336902602A51A21C001F3113 /* CategoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369025F2A51A21C001F3113 /* CategoriesManager.swift */; };
+		336902622A51A36B001F3113 /* CategoriesObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902612A51A36B001F3113 /* CategoriesObjects.swift */; };
+		336902672A5220D8001F3113 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 336902662A5220D8001F3113 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,11 @@
 		336902452A50AB79001F3113 /* MenuAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		336902492A50AB79001F3113 /* MenuAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppUITests.swift; sourceTree = "<group>"; };
 		3369024B2A50AB79001F3113 /* MenuAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		336902582A50AB98001F3113 /* DishesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesManager.swift; sourceTree = "<group>"; };
+		3369025A2A519F05001F3113 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3369025C2A519F40001F3113 /* DishesObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesObjects.swift; sourceTree = "<group>"; };
+		3369025F2A51A21C001F3113 /* CategoriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesManager.swift; sourceTree = "<group>"; };
+		336902612A51A36B001F3113 /* CategoriesObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336902672A5220D8001F3113 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3369022E2A50AB77001F3113 /* MenuAppApp.swift */,
+				3369025E2A51A1F4001F3113 /* Model */,
 				336902302A50AB77001F3113 /* ContentView.swift */,
 				336902322A50AB79001F3113 /* Assets.xcassets */,
 				336902342A50AB79001F3113 /* Preview Content */,
@@ -127,6 +140,34 @@
 			path = MenuAppUITests;
 			sourceTree = "<group>";
 		};
+		3369025E2A51A1F4001F3113 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				336902642A51A3A9001F3113 /* Categories */,
+				336902632A51A395001F3113 /* Dishes */,
+				3369025A2A519F05001F3113 /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		336902632A51A395001F3113 /* Dishes */ = {
+			isa = PBXGroup;
+			children = (
+				336902582A50AB98001F3113 /* DishesManager.swift */,
+				3369025C2A519F40001F3113 /* DishesObjects.swift */,
+			);
+			path = Dishes;
+			sourceTree = "<group>";
+		};
+		336902642A51A3A9001F3113 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3369025F2A51A21C001F3113 /* CategoriesManager.swift */,
+				336902612A51A36B001F3113 /* CategoriesObjects.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +184,9 @@
 			dependencies = (
 			);
 			name = MenuApp;
+			packageProductDependencies = (
+				336902662A5220D8001F3113 /* SwiftyJSON */,
+			);
 			productName = MenuApp;
 			productReference = 3369022B2A50AB77001F3113 /* MenuApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 336902222A50AB77001F3113;
+			packageReferences = (
+				336902652A5220D8001F3113 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 3369022C2A50AB77001F3113 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336902592A50AB98001F3113 /* DishesManager.swift in Sources */,
+				3369025D2A519F40001F3113 /* DishesObjects.swift in Sources */,
+				336902622A51A36B001F3113 /* CategoriesObjects.swift in Sources */,
 				336902312A50AB77001F3113 /* ContentView.swift in Sources */,
 				3369022F2A50AB77001F3113 /* MenuAppApp.swift in Sources */,
+				3369025B2A519F05001F3113 /* Constants.swift in Sources */,
+				336902602A51A21C001F3113 /* CategoriesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		336902652A5220D8001F3113 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		336902662A5220D8001F3113 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 336902652A5220D8001F3113 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 336902232A50AB77001F3113 /* Project object */;
 }
