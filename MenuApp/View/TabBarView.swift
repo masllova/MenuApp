@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TabBarView: View {
     @State private var selectedTab = 0
-    
     let categoriesManager = CategoriesManager()
     
     var body: some View {
@@ -21,7 +20,6 @@ struct TabBarView: View {
                     TabBarLabels.main.label
                 }
                 .tag(0)
-            
             SearchTabView()
                 .tabItem {
                     TabBarImages.search.image
@@ -29,7 +27,6 @@ struct TabBarView: View {
                     TabBarLabels.search.label
                 }
                 .tag(1)
-            
             CartTabView()
                 .tabItem {
                     TabBarImages.cart.image
@@ -37,7 +34,6 @@ struct TabBarView: View {
                     TabBarLabels.cart.label
                 }
                 .tag(2)
-            
             AccountTabView()
                 .tabItem {
                     TabBarImages.account.image

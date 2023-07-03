@@ -17,15 +17,7 @@ struct MainTabView: View {
                     LazyVStack(spacing: 8) {
                         ForEach(categoriesManager.categories) { category in
                             NavigationLink(destination: CategoryDetailView(category: category)) {
-                                AsyncImage(url: category.imageUrl) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 343, height: 148)
-                                } placeholder: {
-                                    ProgressView()
-                                        .frame(width: 343, height: 148)
-                                }
+                                categoryImage(for: category)
                             }
                         }
                     }.padding(.top, 8)
@@ -33,11 +25,11 @@ struct MainTabView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .principal) {
-                    VStack {
-                        Spacer()
-                        MainTabViewHeader()
-                    }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    MainTabViewHeader()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    UsersIcon()
                 }
             }
         }
@@ -45,17 +37,31 @@ struct MainTabView: View {
             categoriesManager.fetchCategories()
         }
     }
-}
-
-
-struct CategoryDetailView: View {
-    var category: Category
     
-    var body: some View {
-        Text(category.name)
-            .navigationBarTitle(category.name, displayMode: .inline)
+    func categoryImage(for category: Category) -> some View {
+        ZStack(alignment: .topLeading) {
+            AsyncImage(url: category.imageUrl) { image in
+                image
+                    .resizable()
+                    .frame(width: 343, height: 148)
+                    .aspectRatio(contentMode: .fit)
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 343, height: 148)
+            }
+            VStack(alignment: .leading) {
+                Text(category.name)
+                    .foregroundColor(.black)
+                    .font(.system(size: 20, weight: .medium))
+                    .frame(width: 191, alignment: .leading)
+                    .multilineTextAlignment(.leading)
+            }
+            .padding(.top, 12)
+            .padding(.leading, 16)
+        }
     }
 }
+
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {

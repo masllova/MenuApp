@@ -26,6 +26,8 @@
 		336902712A52F15A001F3113 /* AccountTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902702A52F15A001F3113 /* AccountTabView.swift */; };
 		336902782A52F6AF001F3113 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902772A52F6AF001F3113 /* TabBarItems.swift */; };
 		336902952A5301DB001F3113 /* MainTabViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902942A5301DB001F3113 /* MainTabViewHeader.swift */; };
+		336902982A5337F0001F3113 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902972A5337F0001F3113 /* CategoryDetailView.swift */; };
+		3369029A2A534DEB001F3113 /* UsersIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902992A534DEB001F3113 /* UsersIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		336902702A52F15A001F3113 /* AccountTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabView.swift; sourceTree = "<group>"; };
 		336902772A52F6AF001F3113 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		336902942A5301DB001F3113 /* MainTabViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewHeader.swift; sourceTree = "<group>"; };
+		336902972A5337F0001F3113 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
+		336902992A534DEB001F3113 /* UsersIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				3369026A2A52F0AA001F3113 /* MainTabView.swift */,
-				336902942A5301DB001F3113 /* MainTabViewHeader.swift */,
+				336902972A5337F0001F3113 /* CategoryDetailView.swift */,
+				3369029B2A534F12001F3113 /* SubViews */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -240,6 +245,15 @@
 				336902702A52F15A001F3113 /* AccountTabView.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		3369029B2A534F12001F3113 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				336902992A534DEB001F3113 /* UsersIcon.swift */,
+				336902942A5301DB001F3113 /* MainTabViewHeader.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,10 +397,12 @@
 				336902782A52F6AF001F3113 /* TabBarItems.swift in Sources */,
 				336902622A51A36B001F3113 /* CategoriesObjects.swift in Sources */,
 				3369026B2A52F0AA001F3113 /* MainTabView.swift in Sources */,
+				336902982A5337F0001F3113 /* CategoryDetailView.swift in Sources */,
 				336902312A50AB77001F3113 /* TabBarView.swift in Sources */,
 				336902712A52F15A001F3113 /* AccountTabView.swift in Sources */,
 				3369022F2A50AB77001F3113 /* MenuAppApp.swift in Sources */,
 				336902952A5301DB001F3113 /* MainTabViewHeader.swift in Sources */,
+				3369029A2A534DEB001F3113 /* UsersIcon.swift in Sources */,
 				3369026F2A52F131001F3113 /* CartTabView.swift in Sources */,
 				3369025B2A519F05001F3113 /* Constants.swift in Sources */,
 				336902602A51A21C001F3113 /* CategoriesManager.swift in Sources */,

@@ -9,20 +9,19 @@ import SwiftUI
 
 struct MainTabViewHeader: View {
     var body: some View {
-        VStack(alignment: .center) {
-            headerView()
-        }
+        VStack(alignment: .leading) {
+            Spacer()
+            header
+        }.frame(maxWidth: .infinity, idealHeight: 101)
         
         .foregroundColor(.white)
     }
-    
-    func headerView() -> some View {
+    var header: some View {
         HStack(alignment: .top) {
             Image("geolocation")
                 .resizable()
                 .frame(width: 24, height: 24)
                 .padding(.top, 2)
-            
             VStack(alignment: .leading) {
                 Text(cityName())
                     .font(.system(size: 18))
@@ -32,16 +31,10 @@ struct MainTabViewHeader: View {
                     .foregroundColor(.black.opacity(0.5))
             }
             Spacer()
-            Image(systemName: "person.crop.circle")
-                .resizable()
-                .frame(width: 40, height: 40)
-                .foregroundColor(.black.opacity(0.5))
-                .padding(.horizontal, 16)
-                
-        }.padding(.bottom, 8)
-        .frame(maxWidth: .infinity, idealHeight: 101)
+        }
+        .padding(.bottom, 8)
     }
-    
+    // MARK: - func
     func cityName() -> String {
         return "Санкт-Петербург"
     }
