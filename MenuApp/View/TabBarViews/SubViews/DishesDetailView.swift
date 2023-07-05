@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct DishesDetailView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var dataStore: DataStore
     @Binding var show: Bool
+    
     var dish: Dish?
     
     var body: some View {
@@ -104,6 +107,9 @@ struct DishesDetailView: View {
     
     var addButton: some View {
         Button {
+            if let dish = dish {
+                dataStore.addItem(dish)
+            }
             withAnimation(.linear(duration: 0.3)) {
                 show = false
             }

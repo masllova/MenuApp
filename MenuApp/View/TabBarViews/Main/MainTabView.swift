@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @ObservedObject var categoriesManager: CategoriesManager
+    @StateObject private var dishesManager = DishesManager()
     
     var body: some View {
         NavigationView {
@@ -16,7 +17,7 @@ struct MainTabView: View {
                 ScrollView {
                     LazyVStack(spacing: 8) {
                         ForEach(categoriesManager.categories) { category in
-                            NavigationLink(destination: DishesView(dishesManager: DishesManager(), category: category)) {
+                            NavigationLink(destination: DishesView(dishesManager: dishesManager, category: category)) {
                                 categoryImage(for: category)
                             }
                         }
@@ -26,7 +27,7 @@ struct MainTabView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    MainTabViewHeader()
+                   TabViewHeader()
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     UsersIcon()

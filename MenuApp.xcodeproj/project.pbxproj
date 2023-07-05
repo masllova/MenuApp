@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		334B59562A54E3F5008CE597 /* CategorySelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B59552A54E3F5008CE597 /* CategorySelected.swift */; };
 		334B59582A5576B4008CE597 /* DishesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B59572A5576B4008CE597 /* DishesDetailView.swift */; };
+		334B595D2A55D72B008CE597 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B595C2A55D72B008CE597 /* DataStore.swift */; };
+		334B595F2A55DCBD008CE597 /* DishInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B595E2A55DCBD008CE597 /* DishInCard.swift */; };
 		3369022F2A50AB77001F3113 /* MenuAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369022E2A50AB77001F3113 /* MenuAppApp.swift */; };
 		336902312A50AB77001F3113 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902302A50AB77001F3113 /* TabBarView.swift */; };
 		336902332A50AB79001F3113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336902322A50AB79001F3113 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		334B59552A54E3F5008CE597 /* CategorySelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelected.swift; sourceTree = "<group>"; };
 		334B59572A5576B4008CE597 /* DishesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDetailView.swift; sourceTree = "<group>"; };
+		334B595C2A55D72B008CE597 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		334B595E2A55DCBD008CE597 /* DishInCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishInCard.swift; sourceTree = "<group>"; };
 		3369022B2A50AB77001F3113 /* MenuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3369022E2A50AB77001F3113 /* MenuAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppApp.swift; sourceTree = "<group>"; };
 		336902302A50AB77001F3113 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			children = (
 				336902642A51A3A9001F3113 /* Categories */,
 				336902632A51A395001F3113 /* Dishes */,
+				3369025A2A519F05001F3113 /* Constants.swift */,
+				334B595C2A55D72B008CE597 /* DataStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				336902582A50AB98001F3113 /* DishesManager.swift */,
-				3369025A2A519F05001F3113 /* Constants.swift */,
 				3369025C2A519F40001F3113 /* DishesObjects.swift */,
 			);
 			path = Dishes;
@@ -191,8 +196,8 @@
 		336902682A52EF7C001F3113 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				336902302A50AB77001F3113 /* TabBarView.swift */,
 				336902772A52F6AF001F3113 /* TabBarItems.swift */,
+				336902302A50AB77001F3113 /* TabBarView.swift */,
 				336902692A52F06F001F3113 /* TabBarViews */,
 			);
 			path = View;
@@ -201,6 +206,7 @@
 		336902692A52F06F001F3113 /* TabBarViews */ = {
 			isa = PBXGroup;
 			children = (
+				3369029B2A534F12001F3113 /* SubViews */,
 				336902902A52FF11001F3113 /* Main */,
 				336902912A52FF22001F3113 /* Search */,
 				336902922A52FF2B001F3113 /* Cart */,
@@ -222,7 +228,6 @@
 			children = (
 				3369026A2A52F0AA001F3113 /* MainTabView.swift */,
 				336902972A5337F0001F3113 /* DishesView.swift */,
-				3369029B2A534F12001F3113 /* SubViews */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				336902942A5301DB001F3113 /* MainTabViewHeader.swift */,
 				334B59552A54E3F5008CE597 /* CategorySelected.swift */,
 				334B59572A5576B4008CE597 /* DishesDetailView.swift */,
+				334B595E2A55DCBD008CE597 /* DishInCard.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -399,12 +405,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				336902592A50AB98001F3113 /* DishesManager.swift in Sources */,
+				334B595F2A55DCBD008CE597 /* DishInCard.swift in Sources */,
 				3369025D2A519F40001F3113 /* DishesObjects.swift in Sources */,
 				336902782A52F6AF001F3113 /* TabBarItems.swift in Sources */,
 				336902622A51A36B001F3113 /* CategoriesObjects.swift in Sources */,
 				3369026B2A52F0AA001F3113 /* MainTabView.swift in Sources */,
 				336902982A5337F0001F3113 /* DishesView.swift in Sources */,
 				336902312A50AB77001F3113 /* TabBarView.swift in Sources */,
+				334B595D2A55D72B008CE597 /* DataStore.swift in Sources */,
 				336902712A52F15A001F3113 /* AccountTabView.swift in Sources */,
 				334B59582A5576B4008CE597 /* DishesDetailView.swift in Sources */,
 				334B59562A54E3F5008CE597 /* CategorySelected.swift in Sources */,
