@@ -14,30 +14,45 @@ struct DishesView: View {
     @ObservedObject var dishesManager: DishesManager
     
     var category: Category
+    @State private var selectedDish: Dish? = nil
+    @State private var showDetails: Bool = false
     
     var filteredDishes: [Dish] {
-            if selectedTag == .allMenu {
-                return dishesManager.dishes
-            } else {
-                return dishesManager.dishes.filter { $0.tegs.contains(selectedTag) }
-            }
+        if selectedTag == .allMenu {
+            return dishesManager.dishes
+        } else {
+            return dishesManager.dishes.filter { $0.tegs.contains(selectedTag) }
         }
+    }
     
     var body: some View {
+        ZStack {
         VStack (spacing: 16) {
             CategorySelected(selectedTag: $selectedTag)
             
-            ScrollView (.vertical, showsIndicators: false) {
-                LazyVGrid(columns: [ GridItem(), GridItem(), GridItem() ]) {
-                    ForEach(filteredDishes) { dish in
-                        LazyHStack (alignment: .top){
-                            dishIcon(for: dish)
+            ZStack {
+                ScrollView (.vertical, showsIndicators: false) {
+                    LazyVGrid(columns: [ GridItem(), GridItem(), GridItem() ]) {
+                        ForEach(filteredDishes) { dish in
+                            LazyHStack (alignment: .top){
+                                Button {
+                                    withAnimation(.linear(duration: 0.3)) {
+                                        selectedDish = dish
+                                        showDetails = true
+                                    }
+                                } label: {
+                                    dishIcon(for: dish)
+                                }
+                                
+                            }
                         }
-                    }
-                } .padding(.top, 8)
-            } .padding(.horizontal, 16)
-            
+                    } .padding(.top, 8)
+                } .padding(.horizontal, 16)
+                
+            }
         }
+            DishesDetailView(show: $showDetails, dish: selectedDish)
+    }
         .navigationBarTitle(category.name, displayMode: .automatic)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
@@ -83,11 +98,5 @@ struct DishesView: View {
                 .frame(width: 109, alignment: .leading)
                 .multilineTextAlignment(.leading)
         }
-    }
-}
-
-struct CategoryDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DishesView(dishesManager: DishesManager(), category: Category(id: 9, name: "Название категории", imageUrl: URL(fileURLWithPath: "")))
     }
 }

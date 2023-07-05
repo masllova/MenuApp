@@ -36,6 +36,21 @@ struct MainTabView: View {
         .onAppear {
             categoriesManager.fetchCategories()
         }
+        
+    }
+    
+    var imageView: some View {
+        VStack {
+            ScrollView {
+                LazyVStack(spacing: 8) {
+                    ForEach(categoriesManager.categories) { category in
+                        NavigationLink(destination: DishesView(dishesManager: DishesManager(), category: category)) {
+                            categoryImage(for: category)
+                        }
+                    }
+                }.padding(.top, 8)
+            }
+        }
     }
     
     func categoryImage(for category: Category) -> some View {

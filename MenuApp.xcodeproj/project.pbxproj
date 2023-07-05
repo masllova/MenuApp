@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		334B59562A54E3F5008CE597 /* CategorySelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B59552A54E3F5008CE597 /* CategorySelected.swift */; };
+		334B59582A5576B4008CE597 /* DishesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B59572A5576B4008CE597 /* DishesDetailView.swift */; };
 		3369022F2A50AB77001F3113 /* MenuAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369022E2A50AB77001F3113 /* MenuAppApp.swift */; };
 		336902312A50AB77001F3113 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902302A50AB77001F3113 /* TabBarView.swift */; };
 		336902332A50AB79001F3113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336902322A50AB79001F3113 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		334B59552A54E3F5008CE597 /* CategorySelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelected.swift; sourceTree = "<group>"; };
+		334B59572A5576B4008CE597 /* DishesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDetailView.swift; sourceTree = "<group>"; };
 		3369022B2A50AB77001F3113 /* MenuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3369022E2A50AB77001F3113 /* MenuAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppApp.swift; sourceTree = "<group>"; };
 		336902302A50AB77001F3113 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				336902992A534DEB001F3113 /* UsersIcon.swift */,
 				336902942A5301DB001F3113 /* MainTabViewHeader.swift */,
 				334B59552A54E3F5008CE597 /* CategorySelected.swift */,
+				334B59572A5576B4008CE597 /* DishesDetailView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				336902982A5337F0001F3113 /* DishesView.swift in Sources */,
 				336902312A50AB77001F3113 /* TabBarView.swift in Sources */,
 				336902712A52F15A001F3113 /* AccountTabView.swift in Sources */,
+				334B59582A5576B4008CE597 /* DishesDetailView.swift in Sources */,
 				334B59562A54E3F5008CE597 /* CategorySelected.swift in Sources */,
 				3369022F2A50AB77001F3113 /* MenuAppApp.swift in Sources */,
 				336902952A5301DB001F3113 /* MainTabViewHeader.swift in Sources */,
