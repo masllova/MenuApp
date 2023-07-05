@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Dish {
+struct Dish: Identifiable {
     let id: Int
     let name: String
     let price: Int
@@ -17,11 +17,11 @@ struct Dish {
     let tegs: [Tag]
 }
 
-enum Tag: String {
+enum Tag: String, CaseIterable {
     case allMenu = "Все меню"
-    case withFish = "С рыбой"
-    case withRice = "С рисом"
     case salads = "Салаты"
+    case withRice = "С рисом"
+    case withFish = "С рыбой"
 }
 
 enum DishesKeys {

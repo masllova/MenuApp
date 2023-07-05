@@ -15,9 +15,3 @@ struct UsersIcon: View {
             .foregroundColor(.black.opacity(0.35))
     }
 }
-
-struct AccountIcon_Previews: PreviewProvider {
-    static var previews: some View {
-        UsersIcon()
-    }
-}

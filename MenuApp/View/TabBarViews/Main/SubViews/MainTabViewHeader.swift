@@ -47,9 +47,3 @@ struct MainTabViewHeader: View {
         return capitalizedDateString
     }
 }
-
-struct MainTabViewHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        MainTabViewHeader()
-    }
-}

@@ -8,10 +8,10 @@
 import Foundation
 import SwiftyJSON
 
-class DishesManager {
-    var dishes: [Dish] = []
+class DishesManager: ObservableObject {
+    @Published var dishes: [Dish] = []
     
-    init() {
+    func fetchDishes() {
         if let url = URL(string: Urls.dishesUrl) {
                 URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
                     if let error = error {
@@ -32,10 +32,11 @@ class DishesManager {
         }
 
     func parseDishesFromJSON(jsonData: Data) {
+        DispatchQueue.main.async { [weak self] in
         let json = try? JSON(data: jsonData)
         let dishesArray = json?[DishesKeys.dishes].arrayValue
-
-        dishes = dishesArray?.map { dishJSON in
+        
+            self?.dishes = dishesArray?.map { dishJSON in
             let id = dishJSON[DishesKeys.id].intValue
             let name = dishJSON[DishesKeys.name].stringValue
             let price = dishJSON[DishesKeys.price].intValue
@@ -44,13 +45,14 @@ class DishesManager {
             let imageUrlString = dishJSON[DishesKeys.imageUrl].stringValue
             let imageUrl = URL(string: imageUrlString)!
             let tegsArray = dishJSON[DishesKeys.tegs].arrayValue
-                    let tegs = tegsArray.map { tagJSON in
-                        let tagName = tagJSON.stringValue
-                        let tag = Tag(rawValue: tagName)!
-                        return tag
-                    }
-
+            let tegs = tegsArray.map { tagJSON in
+                let tagName = tagJSON.stringValue
+                let tag = Tag(rawValue: tagName)!
+                return tag
+            }
+            
             return Dish(id: id, name: name, price: price, weight: weight, description: description, imageUrl: imageUrl, tegs: tegs)
         } ?? []
+    }
     }
 }

@@ -16,7 +16,7 @@ struct MainTabView: View {
                 ScrollView {
                     LazyVStack(spacing: 8) {
                         ForEach(categoriesManager.categories) { category in
-                            NavigationLink(destination: CategoryDetailView(category: category)) {
+                            NavigationLink(destination: DishesView(dishesManager: DishesManager(), category: category)) {
                                 categoryImage(for: category)
                             }
                         }
@@ -65,7 +65,6 @@ struct MainTabView: View {
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        let categoriesManager = CategoriesManager()
-        return MainTabView(categoriesManager: categoriesManager)
+        return MainTabView(categoriesManager: CategoriesManager())
     }
 }

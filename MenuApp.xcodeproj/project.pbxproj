@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334B59562A54E3F5008CE597 /* CategorySelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B59552A54E3F5008CE597 /* CategorySelected.swift */; };
 		3369022F2A50AB77001F3113 /* MenuAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369022E2A50AB77001F3113 /* MenuAppApp.swift */; };
 		336902312A50AB77001F3113 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902302A50AB77001F3113 /* TabBarView.swift */; };
 		336902332A50AB79001F3113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336902322A50AB79001F3113 /* Assets.xcassets */; };
@@ -26,7 +27,7 @@
 		336902712A52F15A001F3113 /* AccountTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902702A52F15A001F3113 /* AccountTabView.swift */; };
 		336902782A52F6AF001F3113 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902772A52F6AF001F3113 /* TabBarItems.swift */; };
 		336902952A5301DB001F3113 /* MainTabViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902942A5301DB001F3113 /* MainTabViewHeader.swift */; };
-		336902982A5337F0001F3113 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902972A5337F0001F3113 /* CategoryDetailView.swift */; };
+		336902982A5337F0001F3113 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902972A5337F0001F3113 /* DishesView.swift */; };
 		3369029A2A534DEB001F3113 /* UsersIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336902992A534DEB001F3113 /* UsersIcon.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		334B59552A54E3F5008CE597 /* CategorySelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelected.swift; sourceTree = "<group>"; };
 		3369022B2A50AB77001F3113 /* MenuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3369022E2A50AB77001F3113 /* MenuAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppApp.swift; sourceTree = "<group>"; };
 		336902302A50AB77001F3113 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		336902702A52F15A001F3113 /* AccountTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabView.swift; sourceTree = "<group>"; };
 		336902772A52F6AF001F3113 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		336902942A5301DB001F3113 /* MainTabViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewHeader.swift; sourceTree = "<group>"; };
-		336902972A5337F0001F3113 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
+		336902972A5337F0001F3113 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
 		336902992A534DEB001F3113 /* UsersIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				3369026A2A52F0AA001F3113 /* MainTabView.swift */,
-				336902972A5337F0001F3113 /* CategoryDetailView.swift */,
+				336902972A5337F0001F3113 /* DishesView.swift */,
 				3369029B2A534F12001F3113 /* SubViews */,
 			);
 			path = Main;
@@ -252,6 +254,7 @@
 			children = (
 				336902992A534DEB001F3113 /* UsersIcon.swift */,
 				336902942A5301DB001F3113 /* MainTabViewHeader.swift */,
+				334B59552A54E3F5008CE597 /* CategorySelected.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -397,9 +400,10 @@
 				336902782A52F6AF001F3113 /* TabBarItems.swift in Sources */,
 				336902622A51A36B001F3113 /* CategoriesObjects.swift in Sources */,
 				3369026B2A52F0AA001F3113 /* MainTabView.swift in Sources */,
-				336902982A5337F0001F3113 /* CategoryDetailView.swift in Sources */,
+				336902982A5337F0001F3113 /* DishesView.swift in Sources */,
 				336902312A50AB77001F3113 /* TabBarView.swift in Sources */,
 				336902712A52F15A001F3113 /* AccountTabView.swift in Sources */,
+				334B59562A54E3F5008CE597 /* CategorySelected.swift in Sources */,
 				3369022F2A50AB77001F3113 /* MenuAppApp.swift in Sources */,
 				336902952A5301DB001F3113 /* MainTabViewHeader.swift in Sources */,
 				3369029A2A534DEB001F3113 /* UsersIcon.swift in Sources */,
