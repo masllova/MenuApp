@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Dish: Identifiable {
+struct Dish: Identifiable, Equatable {
     let id: Int
     let name: String
     let price: Int

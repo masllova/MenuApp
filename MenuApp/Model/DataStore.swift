@@ -13,4 +13,11 @@ class DataStore: ObservableObject {
     func addItem(_ dish: Dish) {
         dishesInCart.append(dish)
     }
+    
+    func deleteItem(_ dish: Dish) {
+        if let index = dishesInCart.firstIndex(of: dish) {
+            dishesInCart.remove(at: index)
+        }
+    }
 }
+

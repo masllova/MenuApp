@@ -16,9 +16,9 @@ struct CartTabView: View {
                 ScrollView {
                     LazyVStack(spacing: 8) {
                         ForEach(dataStore.dishesInCart, id: \.id) { dish in
-                           // view
+                           DishInCard(dish: dish)
                         }
-                    }.padding(.top, 8)
+                    }.padding(.top, 23)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
