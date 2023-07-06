@@ -53,7 +53,7 @@ struct DishInCard: View {
                     .font(.system(size: 14))
                     .frame(width: 120, alignment: .leading)
                 HStack (spacing: 0) {
-                    Text("\(dish.price * count) ₽")
+                    Text("\(dish.price) ₽")
                         .foregroundColor(.black)
                     Text(" · \(dish.weight)г")
                         .foregroundColor(.lightLabelColor)
