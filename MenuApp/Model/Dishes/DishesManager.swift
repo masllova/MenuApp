@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-class DishesManager: ObservableObject {
+final class DishesManager: ObservableObject {
     @Published var dishes: [Dish] = []
     
     func fetchDishes() {
@@ -31,7 +31,7 @@ class DishesManager: ObservableObject {
             }
         }
 
-    func parseDishesFromJSON(jsonData: Data) {
+   private func parseDishesFromJSON(jsonData: Data) {
         DispatchQueue.main.async { [weak self] in
         let json = try? JSON(data: jsonData)
         let dishesArray = json?[DishesKeys.dishes].arrayValue

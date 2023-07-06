@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-class CategoriesManager: ObservableObject {
+final class CategoriesManager: ObservableObject {
     @Published var categories: [Category] = []
     
     func fetchCategories() {

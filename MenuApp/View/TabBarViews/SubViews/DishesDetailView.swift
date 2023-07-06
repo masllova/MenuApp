@@ -68,7 +68,7 @@ struct DishesDetailView: View {
         }.padding(10)
     }
     
-    func createPanelsButton(imageName: String) -> some View  {
+    private func createPanelsButton(imageName: String) -> some View  {
         Image(imageName)
             .padding(10)
             .background(

@@ -11,13 +11,13 @@ struct DishesView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State private var selectedTag: Tag = .allMenu
-    @ObservedObject var dishesManager: DishesManager
+    @ObservedObject private var dishesManager: DishesManager
     
-    var category: Category
+    private var category: Category
     @State private var selectedDish: Dish? = nil
     @State private var showDetails: Bool = false
     
-    var filteredDishes: [Dish] {
+    private var filteredDishes: [Dish] {
         if selectedTag == .allMenu {
             return dishesManager.dishes
         } else {
@@ -76,7 +76,7 @@ struct DishesView: View {
         }
     }
     
-    func dishIcon(for dish: Dish) -> some View {
+    private func dishIcon(for dish: Dish) -> some View {
         VStack (spacing: 5) {
             ZStack(alignment: .center) {
                 RoundedRectangle(cornerRadius: 10)

@@ -35,10 +35,10 @@ struct TabViewHeader: View {
         .padding(.bottom, 8)
     }
     // MARK: - func
-    func cityName() -> String {
+    private func cityName() -> String {
         return "Санкт-Петербург"
     }
-    func getCurrentDate() -> String {
+    private func getCurrentDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "ru_RU")
         dateFormatter.dateFormat = "d MMMM, yyyy"

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabBarView: View {
     @State private var selectedTab = 0
-    let categoriesManager = CategoriesManager()
+    private let categoriesManager = CategoriesManager()
     
     var body: some View {
         TabView(selection: $selectedTab) {

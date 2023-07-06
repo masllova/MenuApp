@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DataStore: ObservableObject {
+final class DataStore: ObservableObject {
     @Published var dishesInCart: [Dish] = []
     @Published var purchaseAmount: Int = 0
     

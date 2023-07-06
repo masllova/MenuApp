@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @ObservedObject var categoriesManager: CategoriesManager
+    @ObservedObject private var categoriesManager: CategoriesManager
     @StateObject private var dishesManager = DishesManager()
     
     var body: some View {
@@ -54,7 +54,7 @@ struct MainTabView: View {
         }
     }
     
-    func categoryImage(for category: Category) -> some View {
+    private func categoryImage(for category: Category) -> some View {
         ZStack(alignment: .topLeading) {
             AsyncImage(url: category.imageUrl) { image in
                 image
