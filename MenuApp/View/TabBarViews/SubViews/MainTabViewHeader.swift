@@ -28,7 +28,7 @@ struct TabViewHeader: View {
                     .foregroundColor(.black)
                 Text(getCurrentDate())
                     .font(.system(size: 14))
-                    .foregroundColor(.black.opacity(0.5))
+                    .foregroundColor(.labelColor)
             }
             Spacer()
         }

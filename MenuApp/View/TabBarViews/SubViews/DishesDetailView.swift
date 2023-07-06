@@ -34,7 +34,7 @@ struct DishesDetailView: View {
         ZStack(alignment: .center) {
             if let dish = dish {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(Color(red: 0.97, green: 0.97, blue: 0.96))
+                    .foregroundColor(.container)
                     .frame(width: 311, height: 232)
                 
                 AsyncImage(url: dish.imageUrl) { image in
@@ -98,7 +98,7 @@ struct DishesDetailView: View {
                 
                 
                 Text(dish.description)
-                    .foregroundColor(.black.opacity(0.65))
+                    .foregroundColor(.subLabelColor)
                     .font(.system(size: 14))
                     .frame(width: 311, alignment: .leading)
             }
@@ -120,7 +120,7 @@ struct DishesDetailView: View {
                 .font(.system(size: 16, weight: .medium))
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.assistant)
                         .frame(width: 311, height: 48)
                     
                 )

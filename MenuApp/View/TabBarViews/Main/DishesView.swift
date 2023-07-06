@@ -57,6 +57,7 @@ struct DishesView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
         .navigationBarItems(trailing: UsersIcon())
+        .background(Color.white)
         .accentColor(.black)
         .onAppear {
             dishesManager.fetchDishes()
@@ -79,7 +80,7 @@ struct DishesView: View {
         VStack (spacing: 5) {
             ZStack(alignment: .center) {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(Color(red: 0.97, green: 0.97, blue: 0.96))
+                    .foregroundColor(.container)
                     .frame(width: 110, height: 110)
                 
                 AsyncImage(url: dish.imageUrl) { image in

@@ -19,7 +19,7 @@ struct  CategorySelected: View {
                         .font(.system(size: 14))
                         .padding(.vertical, 10)
                         .padding(.horizontal, 16)
-                        .background(selectedTag == tag ? Color.blue : Color(red: 0.97, green: 0.97, blue: 0.96))
+                        .background(selectedTag == tag ? Color.assistant: Color.container)
                         .cornerRadius(8)
                         .onTapGesture {
                             selectedTag = tag

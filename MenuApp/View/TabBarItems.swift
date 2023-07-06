@@ -19,7 +19,7 @@ enum TabBarImages: String, CaseIterable {
     }
     
     var selectedColor: Color {
-        return .red
+        return .accentColor
     }
     
     var deselectedColor: Color {

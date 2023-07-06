@@ -32,7 +32,7 @@ struct MainTabView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     UsersIcon()
                 }
-            }
+            }.background(Color.white)
         }
         .onAppear {
             categoriesManager.fetchCategories()

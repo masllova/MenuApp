@@ -26,6 +26,7 @@ struct CartTabView: View {
                 }
                 
             }
+            .background(Color.white)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -49,7 +50,7 @@ struct CartTabView: View {
                 .font(.system(size: 16, weight: .medium))
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.assistant)
                         .frame(width: 343, height: 48)
                     
                 )

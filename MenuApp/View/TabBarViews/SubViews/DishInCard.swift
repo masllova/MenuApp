@@ -27,7 +27,7 @@ struct DishInCard: View {
         ZStack(alignment: .center) {
             if let dish = dish {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(Color(red: 0.97, green: 0.97, blue: 0.96))
+                    .foregroundColor(.container)
                     .frame(width: 62, height: 62)
                 
                 AsyncImage(url: dish.imageUrl) { image in
@@ -56,7 +56,7 @@ struct DishInCard: View {
                     Text("\(dish.price * count) ₽")
                         .foregroundColor(.black)
                     Text(" · \(dish.weight)г")
-                        .foregroundColor(.black.opacity(0.4))
+                        .foregroundColor(.lightLabelColor)
                     Spacer()
                 }.font(.system(size: 14))
                     .frame(width: 120, alignment: .leading)
@@ -94,7 +94,7 @@ struct DishInCard: View {
             }
         }.padding(.horizontal, 6)
             .padding(.vertical, 4)
-            .background(Color(red: 0.94, green: 0.93, blue: 0.93))
+            .background(Color.counterColor)
             .cornerRadius(10)
     }
 }

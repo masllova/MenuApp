@@ -12,6 +12,6 @@ struct UsersIcon: View {
         Image(systemName: "person.crop.circle")
             .resizable()
             .frame(width: 40, height: 40)
-            .foregroundColor(.black.opacity(0.35))
+            .foregroundColor(.lightLabelColor)
     }
 }
