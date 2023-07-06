@@ -109,6 +109,7 @@ struct DishesDetailView: View {
         Button {
             if let dish = dish {
                 dataStore.addItem(dish)
+                dataStore.purchaseAmount += dish.price
             }
             withAnimation(.linear(duration: 0.3)) {
                 show = false

@@ -51,16 +51,15 @@ struct DishInCard: View {
                 Text(dish.name)
                     .foregroundColor(.black)
                     .font(.system(size: 14))
-                    .frame(width: 94, alignment: .leading)
-                
+                    .frame(width: 120, alignment: .leading)
                 HStack (spacing: 0) {
-                    Text("\(dish.price) ₽")
+                    Text("\(dish.price * count) ₽")
                         .foregroundColor(.black)
                     Text(" · \(dish.weight)г")
                         .foregroundColor(.black.opacity(0.4))
                     Spacer()
                 }.font(.system(size: 14))
-                    .frame(width: 94, alignment: .leading)
+                    .frame(width: 120, alignment: .leading)
                 
             }
         }
@@ -69,13 +68,15 @@ struct DishInCard: View {
     var countPanel: some View {
         HStack(spacing: 16) {
             Button {
-                if count > 1 {
-                    count += 1
-                } else {
-                    if let dish = dish {
-                        dataStore.deleteItem(dish)
+                guard let dish = dish else { return }
+                    if count > 1 {
+                        count -= 1
+                    } else {
+                        withAnimation(.linear(duration: 0.1)) {
+                            dataStore.deleteItem(dish)
+                        }
                     }
-                }
+                    dataStore.purchaseAmount -= dish.price
             } label: {
                 Image("minuse")
             }
@@ -85,7 +86,9 @@ struct DishInCard: View {
                 .font(.system(size: 14))
             
             Button {
-                count += 1
+                guard let dish = dish else {return}
+                    count += 1
+                    dataStore.purchaseAmount += dish.price
             } label: {
                 Image("plus")
             }

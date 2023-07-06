@@ -20,6 +20,11 @@ struct CartTabView: View {
                         }
                     }.padding(.top, 23)
                 }
+                Spacer()
+                if dataStore.purchaseAmount > 0 {
+                    payButton
+                }
+                
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -34,11 +39,21 @@ struct CartTabView: View {
         
         
     }
-
-}
-
-struct CartTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        CartTabView()
+    
+    var payButton: some View {
+        Button {
+            //
+        } label: {
+            Text("Оплатить \(dataStore.purchaseAmount) ₽")
+                .foregroundColor(.white)
+                .font(.system(size: 16, weight: .medium))
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.blue)
+                        .frame(width: 343, height: 48)
+                    
+                )
+        }.frame(width: 343, height: 48)
+            .padding(.bottom, 16)
     }
 }

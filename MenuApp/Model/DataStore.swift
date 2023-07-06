@@ -9,6 +9,7 @@ import Foundation
 
 class DataStore: ObservableObject {
     @Published var dishesInCart: [Dish] = []
+    @Published var purchaseAmount: Int = 0
     
     func addItem(_ dish: Dish) {
         dishesInCart.append(dish)

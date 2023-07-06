@@ -12,9 +12,3 @@ struct SearchTabView: View {
         Text("Поиск")
     }
 }
-
-struct SearchTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchTabView()
-    }
-}

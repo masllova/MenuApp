@@ -12,9 +12,3 @@ struct AccountTabView: View {
         Text("Аккаунт")
     }
 }
-
-struct AccountTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountTabView()
-    }
-}
