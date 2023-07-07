@@ -11,9 +11,9 @@ struct DishesView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State private var selectedTag: Tag = .allMenu
-    @ObservedObject private var dishesManager: DishesManager
+    @ObservedObject  var dishesManager: DishesManager
     
-    private var category: Category
+    var category: Category
     @State private var selectedDish: Dish? = nil
     @State private var showDetails: Bool = false
     
